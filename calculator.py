@@ -1,12 +1,15 @@
+from decimal import *
+getcontext().prec = 8
 print('What is the value of your shipment?')
 value = input()
-value = float(value)
-mpf = float()
-mpf = value * .003464
-if mpf >= 485
+value = Decimal(value)
+mpf = Decimal()
+mpf = value * Decimal(.003464)
+landed_cost = Decimal()
+if mpf >= Decimal(485) :
   mpf = 485
-elif mpf <= 25
+elif mpf <= Decimal(25) :
   mpf = 25
-else mpf = value * .003464
-landed_cost = value + mpf
+else: mpf = value * Decimal(.003464)
+landed_cost = str(value + mpf)
 print('The cost plus merchandise fee is $' +landed_cost)
